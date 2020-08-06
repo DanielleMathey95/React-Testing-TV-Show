@@ -1,4 +1,5 @@
 import React from 'react';
+import App from './App';
 import {render} from '@testing-library/react';
 import Episodes from './components/Episodes';
 
@@ -18,6 +19,10 @@ const mockData = [
         _links:{ self:{href: "http://api.tvmaze.com/episodes/553946"}}
   }
 ]
+
+test("renders App without errors", () => {
+  render(<App />)
+})
 
 test("list renders without errors", () => {
   render(<Episodes episodes = {[]} />)
